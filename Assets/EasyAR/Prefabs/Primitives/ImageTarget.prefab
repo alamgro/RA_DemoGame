@@ -54,5 +54,5 @@ MonoBehaviour:
   TargetDataFileSource:
     PathType: 1
     Path: 
-  trackerHasSet: 0
+  trackerHasSet: 1
   tracker: {fileID: 0}
