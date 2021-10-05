@@ -26,7 +26,7 @@ public class Obstacle : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.velocity = -transform.root.right * (speed / 100f);
+        rb.velocity = -transform.root.right * speed * transform.parent.transform.localScale.x;
         //print(-transform.root.right);
     }
 }

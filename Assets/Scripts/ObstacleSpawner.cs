@@ -13,7 +13,6 @@ public class ObstacleSpawner : MonoBehaviour
     void Start()
     {
         //yield return new WaitForSecondsRealtime(1f);
-        print("Primer Spawn");
         GameObject go = Instantiate(prefObstacle, transform);
         go.transform.position = spawnPosition.position;
     }
