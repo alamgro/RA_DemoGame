@@ -23,13 +23,23 @@ public class ScoreManager : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.Instance.isGameOver)
+            return;
+
         timer += Time.deltaTime;
 
         if (timer >= scoreRate)
         {
             timer = 0.0f; //Restart timer
-            scoreUI.text = "" + score.ToString("00000"); //Update timer on UI
-            score++;
+            Score++;
         }
+    }
+
+    public int Score {
+        get { return score; } 
+        set { 
+            score = value;
+            scoreUI.text = "" + score.ToString("00000"); //Update timer on UI
+        } 
     }
 }
